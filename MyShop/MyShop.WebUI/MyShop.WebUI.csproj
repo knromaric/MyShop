@@ -191,6 +191,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductCategoryManagerController.cs" />
     <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -264,9 +265,14 @@
     <Content Include="Views\ProductManager\CreateProduct.cshtml" />
     <Content Include="Views\ProductManager\EditProduct.cshtml" />
     <Content Include="Views\ProductManager\DeleteProduct.cshtml" />
+    <Content Include="Views\ProductCategoryManager\Index.cshtml" />
+    <Content Include="Views\ProductCategoryManager\CreateCategory.cshtml" />
+    <Content Include="Views\ProductCategoryManager\EditCategory.cshtml" />
+    <Content Include="Views\ProductCategoryManager\DeleteCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ProductCategory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
