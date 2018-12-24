@@ -11,7 +11,7 @@ namespace MyShop.DataAcces.InMemory
 {
     public class InMemoryRepository<T> : IRepository<T> where T :  BaseEntity
     {
-        private ObjectCache _cache = MemoryCache.Default;
+        private readonly ObjectCache _cache = MemoryCache.Default;
         private List<T> _itemCollection;
         readonly string className;
 
