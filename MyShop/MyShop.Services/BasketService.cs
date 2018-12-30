@@ -52,7 +52,7 @@ namespace MyShop.Services
                     basket = CreateNewBasket(httpContext);
                 }
             }
-
+             
             return basket;
         }
 
@@ -158,6 +158,13 @@ namespace MyShop.Services
 
         }
 
+        public void ClearBasket(HttpContextBase httpContext)
+        {
+            var basket = GetBasket(httpContext, false);
+            basket.BasketItems.Clear();
+            _basketContext.Commit();
+
+        }
 
 
 
