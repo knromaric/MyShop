@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Security.Principal;
+using System.Web;
 
 namespace MyShop.WebUI.Tests.Mocks
 {
@@ -7,6 +8,7 @@ namespace MyShop.WebUI.Tests.Mocks
         private readonly MockRequest _request;
         private readonly MockResponse _response;
         private readonly HttpCookieCollection _cookies;
+        private IPrincipal FakeUser;
 
         public HttpMockContext()
         {
@@ -14,6 +16,20 @@ namespace MyShop.WebUI.Tests.Mocks
             _request = new MockRequest(_cookies);
             _response = new MockResponse(_cookies);
         }
+
+        public override IPrincipal User 
+        {
+            get
+            {
+                return this.FakeUser;
+            }
+            set
+            {
+                this.FakeUser = value; 
+            }
+        }
+
+
 
         public override HttpRequestBase Request => _request;
         public override HttpResponseBase Response => _response;
